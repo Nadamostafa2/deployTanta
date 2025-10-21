@@ -1,4 +1,5 @@
 "use client"
+import Head from 'next/head';
 import React, { useEffect, useState } from 'react';
 
 const Page = () => {
@@ -9,6 +10,9 @@ const Page = () => {
     },[])
     return (
         <div>
+            <Head>
+                <title>My CSR page</title>
+            </Head>
             <h1>CSR</h1>
             {myData.map(u=><h1 key={u.id}>{u.name}</h1>)}
         </div>

@@ -1,6 +1,11 @@
 import Image from 'next/image';
 import React from 'react';
 
+
+export const metadata={
+    title:"My SSR Page"
+}
+
 async function getData(){
     const res= await fetch(process.env.NEXT_PUBLIC_API_URL,{
         cache:"no-store"
